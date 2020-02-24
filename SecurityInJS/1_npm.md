@@ -11,9 +11,13 @@ The postinstall script can run any node program on your system - this in nature 
 There are a few issues related to this which, together, exposes your system to malicious software:
 
 1. The postinstall script is ***enabled*** by default on npm - it must be manually changed to prevent it. If it is prevented but the script is necessary, it must be run manually which can be time consuming for every package.
+
 2. npm does not integrate security checks with the postinstall script. Users rely on public knowledge or self analysis to determine whether a package can be malicious or not.
+
 3. If an attacker gains access to a popular publisher's account, they can add a malicious postinstall script into the package and republish it, possibly affecting several users who update the package before users register its effects.
 
-### What trade-off npm makes
+   > <insert example>
 
-The obvious question is: *"Why are security standards not enforced in these packages? Why doesn't npm verify packages before they're published?"* and the answer is simple: ***efficiency***. It is simply too difficult for npm to verify every package before it's published. Although npm had a built-in `npm audit` function built in which can detect possible vulnerabilities in packages, it costs too much time to deeply analyse code and verify every possible malicious source of behaviour. For a free and open-source registry like this with thousands of downloads and several new packages published each day, the resources aren't available to maintain this standard of security.
+### The trade-off npm makes
+
+The obvious question is: *"Why are security standards not enforced in these packages? Why doesn't npm verify packages before they're published?"* and the answer is simple: ***efficiency***. It is simply too difficult for npm to verify every package before it's published. Although npm had a built-in `npm audit` function built in which detects vulnerabilities which are already known, it costs too much time to deeply analyse code and verify every possible malicious source of behaviour automatically. For a free and open-source registry like this with thousands of downloads and several new packages published each day, the resources aren't available to maintain this standard of security.
