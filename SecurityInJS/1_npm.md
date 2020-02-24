@@ -1,4 +1,4 @@
-## npm and the postinstall script
+# npm and the postinstall script
 
 The node package manager (npm) is a vital part of development in JS environments; it is responsible for installing packages from the npm registry online that can provide features to your node app. It's completely free and open source, with over 800,000 packages available to integrate into your codebase. It's a simple CLI tool that downloads packages and registers them into a local `package.json` file that keeps track of your app's dependencies and package updates to bring you the latest published features. 
 
