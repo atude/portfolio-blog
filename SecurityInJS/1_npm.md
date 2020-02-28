@@ -35,7 +35,13 @@ Additionally, lifecycle script such as the postinstall have great benefit with a
 Fortunately, since the npm userbase is so large, it is unlikely that a malicious package uploaded will reach you before it is taken down. However, it is vital regardless of this to take precaution from possible malicious scripts, and you can greatly reduce the risk of being compromised with a few simple steps:
 
 1. Run `npm audit` and address security issues constantly to assure vulnerabilities in dependency packages are patched as soon as possible.
+
 2. Disable install scripts by using the `--ignore-scripts` tag when installing a package. This will give you control to choose what scripts to run after or before a certain package is installed manually.
+
 3. Disable all lifecycle scripts entirely by running `npm config set ignore-scripts true`. You will have to trade time efficiency by manually running lifecycle scripts yourself, however.
+
 4. Use a `package-lock.json` file to enforce updates are installed manually and potentially harmful package updates to do not make it to your project or device without permission.
 
+
+
+*`28/02/2020 | Mozamel Anwary*
