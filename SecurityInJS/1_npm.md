@@ -42,7 +42,7 @@ Fortunately, since the npm userbase is so large, it is unlikely that a malicious
 
 4. Use a `package-lock.json` file to enforce updates are installed manually and potentially harmful package updates to do not make it to your project or device without permission.
 
-\
-\
-\
+&nbsp;  
+&nbsp;  
+
 *28/02/2020 | Mozamel Anwary*
