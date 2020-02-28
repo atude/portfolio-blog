@@ -44,6 +44,5 @@ Fortunately, since the npm userbase is so large, it is unlikely that a malicious
 
 \
 \
-\
 
 *28/02/2020 | Mozamel Anwary*
