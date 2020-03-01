@@ -1,4 +1,4 @@
-## Dangerously setting HTML in React
+## Dangerously setting HTML and its XSS vulnerability in React
 
 If you've ever worked in modern web development, at one stage, you may have required to input HTML directly into a component of your site. Although uncommon, in certain circumstances, whether it be due to a lack of functionality that a web package provides, or to inject styles for a component directly which you don't have access to otherwise, setting `innerHTML` through JavaScript can help take a shortcut to achieve what you need without the complexity of digging through source code, mangling packages together, or blowing up your app's bundle size.
 
@@ -23,8 +23,7 @@ MyComponent = () => {
 Although appearing harmless at first, there are no bounds to what an attacker could inject into your code:
 
 ```javascript
-const fetchBackendData = () => {...}
-const landingPageText = "<button onClick={() => doMalicious())}>Find our new site here!</button>"
+const landingPageText = "<button onClick={() => alert('Hacked!')}>Find our new site here!</button>"
 
 HomePage = () => {
   return <div dangerouslySetInnerHTML={{__html: landingPageText}}/>;
@@ -33,28 +32,18 @@ HomePage = () => {
 
 Here is a simple example of inserting a button which, in turn, can gain access to client-side (and, with proper analysis, may be used to fetch server-side) data through exploitation of the `dangerouslySetInnerHTML` tag. Of course, an attacker with enough knowledge can use an XSS attack as such along with other security loopholes to compose a breach at a larger scale. [You can find a more practical example by Jacob Jang here, exploiting an input box to perform an XSS injection.](https://codesandbox.io/s/k9vxk9ppyo?autoresize=1&moduleview=1)
 
-> [example of XSS breach]
-
 ### Common uses for dangerously setting HTML
 
-- Markdown input control and styling
+- Markdown rendering and styling
 - Fetching data as raw HTML to embed into a site
-- Server-side HTML page/component fetching
-- Force styling on uneditable/inaccessible components
+- Server-side HTML page/component rendering
+- Forcing styles on uneditable/inaccessible components
 
-### Sanitising Input Right
+### Injecting HTML safely
 
-[what is sanitising]
+In the case that you must directly inject HTML, there are workarounds to assure it is done safely. This is commonly done through input **sanitisation**. Sanitisation effectively filters through the injected content and strips out potentially malicious code, often by removing HTML tags or JS code that were intended to be utilised as strings - an example of abusing the [use-mention distinction](https://en.wikipedia.org/wiki/Use–mention_distinction). There are multiple packages that can be used to sanitise input in React, including [DOMPurify](https://github.com/cure53/DOMPurify), [js-xss](https://github.com/leizongmin/js-xss), [xss-filters](https://github.com/YahooArchive/xss-filters), and more. Most of these tools serve the same purpose, although some offer extended functionality such as restricting tag usage in certain inputs, restricting website references in HTML, or efficient performance that won't impact the speed of your app. Although usable in most circumstances, none of these packages are perfect - an attacker can analyse the source code carefully and may be able to exploit a weak entry point that can open up possibilities for XSS attacks post-sanitisation.
 
-[loopholes/issues with sanitisation]
-
-[how to get it right]
-
-
-
-### Tools that can help
-
-[]
+### Staying safe from XSS attacks
 
 
 
