@@ -32,7 +32,7 @@ Additionally, lifecycle script such as the postinstall have great benefit with a
 
 ### How to stay secure against malicious npm packages
 
-Fortunately, since the npm userbase is so large, it is unlikely that a malicious package uploaded will reach you before it is taken down. However, it is vital regardless of this to take precaution from possible malicious scripts, and you can greatly reduce the risk of being compromised with a few simple steps:
+Fortunately, since the npm user base is so large, it is unlikely that a malicious package uploaded will reach you before it is taken down. However, it is vital regardless of this to take precaution from possible malicious scripts, and you can greatly reduce the risk of being compromised with a few simple steps:
 
 1. Run `npm audit` and address security issues constantly to assure vulnerabilities in dependency packages are patched as soon as possible.
 
@@ -45,7 +45,5 @@ Fortunately, since the npm userbase is so large, it is unlikely that a malicious
 &nbsp;  
 &nbsp;  
 
-*Mozamel Anwary*
-
-*Feb 28, 2020*
+*Mozamel Anwary ~ Feb 28, 2020*
 
