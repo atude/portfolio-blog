@@ -16,7 +16,7 @@ There are a few issues related to this which, together, exposes your system to m
 
 3. If an attacker gains access to a popular publisher's account, they can add a malicious postinstall script into the package and republish it, possibly affecting several users who update the package before users register its effects.
 
-   > An example of this is the ESLint package attack. ESLint is the a popular linting package used for JavaScript and TypeScript, used to help write and enforce neat code and abide by best practices. On July 12th, 2018, an attacker gained accessed to an ESLint maintainer's account, and managed to publish a version of the package with a malicious postinstall script. The script would download an online file and run it to gain access to the users project base and steal their `.npmrc` file, which contains important access tokens. Once discovered, npm first unpublished the project from the registry, and then later revoked all access tokens that may have been compromised. Several users' passwords may have been compromised as a result of this breach, and npm now enforces a `package-lock.json` file to prevent unwanted packages being automatically installed.
+   > An example of this is the ESLint package attack. ESLint is a popular linting package used for JavaScript and TypeScript, used to help write and enforce neat code and abide by best practices. On July 12th, 2018, an attacker gained accessed to an ESLint maintainer's account, and managed to publish a version of the package with a malicious postinstall script. The script would download an online file and run it to gain access to the users project base and steal their `.npmrc` file, which contains important access tokens. Once discovered, npm first unpublished the project from the registry, and then later revoked all access tokens that may have been compromised. Several users' passwords may have been compromised as a result of this breach, and npm now enforces a `package-lock.json` file to prevent unwanted packages being automatically installed.
 
 ### The trade-off npm makes
 
@@ -45,4 +45,6 @@ Fortunately, since the npm userbase is so large, it is unlikely that a malicious
 &nbsp;  
 &nbsp;  
 
-*28/02/2020 | Mozamel Anwary*
+*Mozamel Anwary*
+*Feb 28, 2020*
+
