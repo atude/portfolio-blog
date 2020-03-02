@@ -45,5 +45,14 @@ In the case that you must directly inject HTML, there are workarounds to assure 
 
 ### Staying safe from XSS attacks
 
+It is essential to stay safe from XSS attacks, regardless of whether you use the `dangerouslySetInnerHTML` tag in React. A few small steps can go a long way to stop attackers from gaining unauthorised access to critical data.
+
+1. **Don't use the `dangerouslySetInnerHTML` tag.** It may be better to use external packages or to edit source code directly to achieve what you need instead. Attempt all other methods first before resorting to using it.
+2. **Always sanitise user input.** Although React already provides sanitisation methods behind the scenes, it always helps to have an added layer on top. Use common open-source sanitisation packages to assure malicious code can't make it's way into your website.
+3. **Follow security best practices.** Restricting access client-side will help limit what an attacker can do even if they successfully gain access through an XSS injection. Keep authorisation tokens safe and unreachable from the client-side. Encrypt data when interacting with the server. Sanitise the data server-side too and assure data is only processed if it comes from reliable sources you specify. The more layers of uncoupled security practices you integrate, the harder you make each step for a hacker to breach your data.
+4. **Use content headers when making HTTP requests.** Enforcing expected typed in HTTP requests using the `Content-Type` and `X-Content-Type-Options` headers allows your server to assure the data you've requested/posted is the type its intended to be.
+
+
+
 
 
