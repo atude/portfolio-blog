@@ -10,12 +10,12 @@ React likes to remind developers of the dangers of injecting HTML directly by na
 // Generates <span> tag with content
 const generateHTML = () => {
   return {
-      __html: "<span>Ooo, maybe this wasn't a good idea...</span>"
+    __html: "<span>Ooo, maybe this wasn't a good idea...</span>"
   };
 }
 
 // Injects generated span tag into div
-MyComponent = () => {
+const MyComponent = () => {
   return <div dangerouslySetInnerHTML={generateHTML()}/>;
 }
 ```
@@ -23,10 +23,19 @@ MyComponent = () => {
 Although appearing harmless at first, there are no bounds to what an attacker could inject into your code:
 
 ```javascript
-const landingPageText = "<button onClick={() => alert('Hacked!')}>Find our new site here!</button>"
+const landingPageText = 
+  "<button onClick={() => alert('Hacked!')}>",
+  "Find our new site here!",
+  "</button>";
 
-HomePage = () => {
-  return <div dangerouslySetInnerHTML={{__html: landingPageText}}/>;
+const HomePage = () => {
+  return (
+  	<div 
+      dangerouslySetInnerHTML={{
+        __html: landingPageText.join()
+	  }}
+    />;
+  );
 }
 ```
 
