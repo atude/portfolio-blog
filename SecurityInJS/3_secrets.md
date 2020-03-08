@@ -4,4 +4,6 @@ When building a webapp with some form of server interaction - whether it's throu
 
 **Secrets**, or **tokens**, are keys provided to a client to access an API or backend service. Usually a client service requests access to a server with a username and password. After the server receives this information and can verify you're a user of this service, it generates a token and sends it back to the client. The client can then send this token through HTTP request headers when making requests to the server, and the server can safely send back requested data when verifying that it gave out this token. 
 
-<img src="/home/atude/Desktop/client-server-img.png" alt="client-server-token-model" style="zoom:30%;" />
+
+
+<img src="https://raw.githubusercontent.com/atude/portfolio-blog/master/_assets/3_client-server-img.png" alt="client-server-token-model" style="zoom:30%;" />
