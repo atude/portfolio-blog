@@ -64,7 +64,6 @@ It is essential to stay safe from XSS attacks, regardless of whether you use the
 
 4. **Use content headers when making HTTP requests.** Enforcing expected types in HTTP requests using the `Content-Type` and `X-Content-Type-Options` headers allows your server to assure the data you've requested/posted is the type its intended to be.
 
-
 &nbsp;  
 &nbsp;  
 
