@@ -6,4 +6,4 @@ When building a webapp with some form of server interaction - whether it's throu
 
 
 
-<img src="https://raw.githubusercontent.com/atude/portfolio-blog/master/_assets/3_client-server-img.png" alt="client-server-token-model" style="zoom:30%; text-align: center" />
+<img src="https://raw.githubusercontent.com/atude/portfolio-blog/master/_assets/3_client-server-img.png" alt="client-server-token-model"/>
