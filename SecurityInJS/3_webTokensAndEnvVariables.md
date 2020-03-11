@@ -1,4 +1,4 @@
-## Web tokens and utilising environment variables
+## Web tokens and using environment variables
 
 When building a webapp with some form of server interaction - whether it's through your own server, a BaaS *(backend-as-a-service)*  implementation, or an external API - it is important to keep your tokens and secrets safe from any users. Leaking these tokens or secrets may allow others to gain access to your server or your API source, which can lead to DDOS *(Distributed Denial of Service)* attacks, exhausting your BaaS quota/API calls (which can be costly for a paid service), and having your server data compromised. 
 
