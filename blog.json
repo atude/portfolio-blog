@@ -3,6 +3,7 @@
   {
     "NPM and the postinstall script": "SecurityInJS/1_npmAndPostinstall.md",
     "Dangerously setting HTML in React": "SecurityInJS/2_dangerouslySetInnerHtml.md",
-    "Web tokens and using environment variables": "SecurityInJS/3_webTokensAndEnvVariables.md"
+    "Web tokens and using environment variables": "SecurityInJS/3_webTokensAndEnvVariables.md",
+    "Authentication and Authorisation": "SecurityInJS/4_authenticationAndAuthorisation.md"
   }
 }
