@@ -4,6 +4,7 @@
     "NPM and the postinstall script": "SecurityInJS/1_npmAndPostinstall.md",
     "Dangerously setting HTML in React": "SecurityInJS/2_dangerouslySetInnerHtml.md",
     "Web tokens and using environment variables": "SecurityInJS/3_webTokensAndEnvVariables.md",
-    "Authentication and Authorisation": "SecurityInJS/4_authenticationAndAuthorisation.md"
+    "Authentication and Authorisation": "SecurityInJS/4_authenticationAndAuthorisation.md",
+    "Cross Origin Resource Sharing (CORS)": "SecurityInJS/5_cors.md"
   }
 }
