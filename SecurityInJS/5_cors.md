@@ -1,10 +1,10 @@
-## Cross Origin Resource Sharing
+## Cross-Origin Resource Sharing
 
 When building a website, you often need to request data from an external API that you can process to bring value to your features. Often, for static or small-scale projects, developers choose to make apps with no backend - simply opting in to process everything on the frontend and collating information from various APIs. When requesting some of these sources, you may come across an error similar to this: 
 
 <p align="center"><img src="https://raw.githubusercontent.com/atude/portfolio-blog/master/_assets/5_cors_error.png" alt="cors-error" style="zoom:30%; max-width: 100%;" /></p>
 
-**Cross Origin Resource Sharing *(CORS)*** is the protocol responsible for allowing applications to request data from another source across different origins/domains. For example, if I had a website hosted on `http://my-website.com` and I had an API endpoint hosted on the same domain that would provide me data, such as `http://my-website.com/users/0`, since both the requesting source and the server source live on the same domain, the server can be confident that the request is coming from a source its intended to server. However, if another website such as `http://not-my-website.com` attempted to access the data from the `users` endpoint, a CORS error would decline the request, since it does not follow the **same-origin policy**.
+**Cross-Origin Resource Sharing *(CORS)*** is the protocol responsible for allowing applications to request data from another source across different origins/domains. For example, if I had a website hosted on `http://my-website.com` and I had an API endpoint hosted on the same domain that would provide me data, such as `http://my-website.com/users/0`, since both the requesting source and the server source live on the same domain, the server can be confident that the request is coming from a source its intended to server. However, if another website such as `http://not-my-website.com` attempted to access the data from the `users` endpoint, a CORS error would decline the request, since it does not follow the **same-origin policy**.
 
 <p align="center"><img src="https://raw.githubusercontent.com/atude/portfolio-blog/master/_assets/5_cors_client_server.png" alt="cors-client-server-interaction" style="zoom:30%; max-width: 100%;" /></p>
 
