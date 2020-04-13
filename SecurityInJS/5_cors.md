@@ -54,3 +54,8 @@ app.all('/*', (req, res, next) => {
 
 Using this, you can easily route and protect your endpoints to the domains you trust. Enabling CORS also helps prevent overloading your database from malicious requests and mitigating DDOS attacks by blacklisting certain domains.
 
+&nbsp;  
+&nbsp;  
+
+*Mozamel Anwary ~ April 8, 2020*
+
