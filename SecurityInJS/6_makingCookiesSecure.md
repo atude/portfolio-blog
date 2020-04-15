@@ -22,13 +22,25 @@ document.cookie = "username=Firstname Lastname";
 This will set the `username` cookie and it will exist until the browser session is closed. To create a more refined cookie, you can add a path, domain (which can help when using the `SameSite` flag)  and set the expiry date:
 
 ```javascript
-document.cookie = "username=Firstname Lastname; expires=Mon, 10 Jan 2020 12:00:00 UTC; domain=mydomain.com; path=/users;";
+const cookie = 
+  "username=Firstname Lastname;" +
+  "expires=Mon, 10 Jan 2020 12:00:00 UTC;" + 
+  "domain=mydomain.com; path=/users;";
+  
+document.cookie = cookie;
 ```
 
 To enforce security through **HTTPS** and forcing **SameSite** access, append them to the string:
 
 ```javascript
-document.cookie = "username=Firstname Lastname; domain=mydomain.com; path=/users; secure; samesite=strict;";
+const cookie = 
+  "username=Firstname Lastname;" +
+  "domain=mydomain.com;" + 
+  "path=/users;" + 
+  "secure;" +
+  "samesite=strict;";
+
+document.cookie = cookie;
 ```
 
 To access the cookie, simply read `document.cookie`. This will return *all* the cookies within the current domain. For example:
